@@ -18,6 +18,36 @@
 
         <p> Vous devez réaliser une fonction d'affichage. <br> La fonction prend en paramètres 2 nombres qui correspondent au début et à la fin d’une plage de nombres. </p>
 
+        <?php 
+
+        //Le tableau de nombres
+        
+        $nombre=array(1,2,3,4,5,6,7,8,9,10);
+        
+        //Cette fonction colore en bleu les nombres paires et en orange les nombres impaires.
+        
+        function colore($nombre){
+            
+            if ($nombre%2 == 0 && sqrt($nombre) == floor(sqrt($nombre))) {
+                echo '<span class="gras">'.$nombre." ".'</span>';
+            } else if ($nombre%2 == 1) {
+                echo'<font color="blue">'.$nombre.'</font>';
+            } else {
+                echo'<font color="orange">'.$nombre.'</font>';
+            }
+        }
+ 
+        //La boucle foreach scanne le tableau en appliquant la fonction colore
+        
+        echo 'Les n premiers nombres sont :<br/>';
+        foreach($nombres as $nombre){
+            echo ' ';
+            colore($nombre);
+            echo '<br/>';
+        }
+ 
+        ?> 
+                                                  
     </div>
     
      <div>
